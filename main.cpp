@@ -13,6 +13,7 @@ int getRandom(size_t max){
     c = fgetc(urandom);
     
   } while (c >= (UCHAR_MAX + 1) / max * max);
+  fclose(urandom);
   return c % max;
 }
 
