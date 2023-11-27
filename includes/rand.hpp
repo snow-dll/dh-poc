@@ -13,7 +13,7 @@ int getRandInt(int len){
     return ct % len;
 }
 
-void getRandomPriv(mpz_t& priv, size_t bitct){
+void getRandPriv(mpz_t& priv, size_t bitct){
     gmp_randstate_t state;
     gmp_randinit_default(state);
     gmp_randseed_ui(state, getRandInt(256));
